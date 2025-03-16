@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.header {
+    width: 100%;
+    /* Tam ekran genişlik */
+    height: auto;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    /* Şık gradient efekti */
+    padding: 60px 0;
+    /* Yükseklik ayarı */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    /* Modern ve şık font */
+    font-size: 55px;
+    font-weight: 700;
+    color: #fff;
+    /* Beyaz renk ile kontrast */
+    text-transform: uppercase;
+    /* Büyük harf */
+    letter-spacing: 2px;
+    /* Harfler arası boşluk */
+    border-bottom: 4px solid #ffffff50;
+    /* Hafif alt çizgi efekti */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* Hafif gölge efekti */
+}
+
+/* Başlığa yumuşak bir animasyon efekti ekleme */
+.header:hover {
+    transform: scale(1.02);
+    /* Üzerine gelince hafif büyütme */
+    transition: 0.3s ease-in-out;
+}
