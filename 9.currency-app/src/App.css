@@ -1,116 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Poppins:wght@400;600&display=swap');
 
+/* Arka plan: Geceyi anımsatan koyu mavi ve siyah geçiş */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: url('/src/images/manytwo.jpg') no-repeat center center fixed;
+  background: url('./images/krallik_manzara.jpg') no-repeat center center fixed;
   background-size: cover;
+  /* Görselin ekranı kaplamasını sağlar */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  padding: 20px;
+  color: #f3e9dc;
+  overflow: hidden;
+  position: relative;
 }
 
-.app {
-  text-align: center;
-}
-
-.title {
-  font-size: 2.5rem;
-  color: #d4f1c5;
-  /* Açık yeşil */
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon {
-  margin-right: 10px;
-}
-
+/* Ana kart: Yarı saydam arka plan */
 .card {
-  background: rgba(0, 40, 20, 0.85);
-  /* Daha koyu yeşil ton */
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  padding: 40px;
-  width: 400px;
-  border: 2px solid #6b8f71;
-  /* Yumuşak yeşil kenarlık */
+  background: rgba(255, 255, 255, 0.1);
+  /* Yarı saydam beyaz */
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.input {
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 2px solid #6b8f71;
-  /* Yumuşak yeşil kenarlık */
-  border-radius: 10px;
-  font-size: 1rem;
-  background: rgba(0, 50, 25, 0.9);
-  /* Koyu yeşil arka plan */
-  color: #d4f1c5;
-  /* Açık yeşil metin */
-}
-
-.input::placeholder {
-  color: #a3b9a1;
-  /* Soluk yeşil placeholder */
-}
-
-.currency-select {
+/* Başlık: Altın sarısı ve parlak */
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffd700;
+  /* Altın sarısı */
+  font-family: 'Uncial Antiqua', cursive;
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  /* Parlaklık efekti */
 }
 
-.select {
-  width: 45%;
-  padding: 10px;
-  border: 2px solid #6b8f71;
-  /* Yumuşak yeşil kenarlık */
-  border-radius: 10px;
-  font-size: 1rem;
-  background: rgba(0, 50, 25, 0.9);
-  /* Koyu yeşil arka plan */
-  color: #d4f1c5;
-  /* Açık yeşil metin */
-}
-
-.exchange-icon {
-  font-size: 1.5rem;
-  color: #d4f1c5;
-  /* Açık yeşil */
-  margin: 0 10px;
-}
-
-.button {
-  background-color: #6b8f71;
-  /* Yumuşak yeşil */
-  color: #ffffff;
-  /* Beyaz metin */
+/* Input alanı */
+.input {
+  padding: 12px;
+  border-radius: 12px;
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
   font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Yarı saydam beyaz */
+  color: #2d114e;
+  outline: none;
+  width: 100%;
+}
+
+/* Placeholder yazılarının rengi */
+.input::placeholder {
+  color: #2d114e;
+  /* Placeholder yazılarının rengi */
+  opacity: 1;
+  /* Görünürlüğü tam olarak ayarlar */
+}
+
+
+/* Para birimi seçimi */
+.select {
+  padding: 10px;
+  border-radius: 12px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Yarı saydam beyaz */
+  color: #2d114e;
+  border: none;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Kraliyet düğmesi */
+.button {
+  background-color: #7b5380;
+  /* Koyu mor ton */
+  border: none;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  align-self: center;
+  /* Ortalar */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  /* Parlaklık efekti */
+  box-shadow: 0 0 15px rgba(123, 83, 128, 0.5);
+  /* Hafif parlaklık */
 }
 
 .button:hover {
-  background-color: #8fbf91;
-  /* Daha parlak yeşil */
+  background-color: #9b6fa0;
+  /* Daha parlak mor ton */
   transform: scale(1.05);
   /* Hafif büyüme efekti */
+  box-shadow: 0 0 20px rgba(123, 83, 128, 0.8);
+  /* Daha belirgin parlaklık */
 }
 
-.result {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #d4f1c5;
-  /* Açık yeşil */
-  font-weight: bold;
+/* Para birimi seçim kutusu */
+.currency-select {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Değişim ikonu */
+.exchange-icon {
+  font-size: 1.5rem;
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+/* Geçmiş kutusu */
+.history-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  max-height: 120px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animasyonlu logo */
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Yavaşça yukarı aşağı hareket için animasyon */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
