@@ -1,0 +1,47 @@
+/* Reset ve temel ayarlar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+}
+
+/* Linkler */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Butonlar */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Görseller */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Responsive yardımcı sınıflar */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
